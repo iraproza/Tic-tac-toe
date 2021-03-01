@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="box start-block">
+            <button class="info"><i class="fas fa-info-circle"></i></button>
+            <div>
+                <h1><i class="fas dagger fa-times"></i> та <i class="far circle fa-circle"></i></h1>
+                <div class="players-box">      
+                    <label for="">Кількість гравців:</label>
+                    <select name="players" id="">
+                        <option value=""></option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="box-name box-name-1">
+                    <label for="">Ім'я першого гравця: <input class="name" type="text" name='name1'></label>
+                    <label for="">Ім'я другого гравця: <input class="name" type="text" name='name2'></label>
+                </div>
+                <div class="box-name box-name-2">
+                    <label for="">Ваше ім'я: <input class="name" type="text" name='name'></label>
+                </div>
+            </div>
+            <button class="btn startBtn">Почати гру</button>
+        </div>
+        <div class="box game-field">
+            <div class="info-game">  
+                <p>Хід: <span class="name-info"></span></p>
+                <button class="remove"> <i class="fas fa-undo"></i></button>
+            </div>
+            <div class="fild-game">
+                <table>
+                    <tr>
+                        <td class="left-top"></td>
+                        <td class="center-top"></td>
+                        <td class="right-top"></td>
+                    </tr>
+                    <tr>
+                        <td class="center-left"></td>
+                        <td></td>
+                        <td class="center-right"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-bottom"></td>
+                        <td class="center-bottom"></td>
+                        <td class="right-bottom"></td>
+                    </tr>
+                
+                </table>
+                <div class='line'></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-res">
+        <div class="result-box">
+            <button class="exit exit-game"><i class="fas fa-times"></i></button>
+            <div><p></p><span></span></div>
+            <div><p></p><span></span></div>
+            <!--<button class="save">Save result</button>-->
+        </div>
+    </div>
+    <div class="bg-rules">
+        <div class="rules-box">
+            <button class="exit exit-rules"><i class="fas fa-times"></i></button>
+            <h3>Трохи про правила </h3> 
+            Мета гри вибудувати на дев’ятиклітковому полі підряд 3 однакові фігури (3 хрестика або 3 нулики) по горизонталі, по вертикалі або діагоналі раніше, ніж це зробить ваш партнер по грі. Гра в хрестики-нулики починається з ходу гравця, який ставить хрестик у будь-якій клітині на ігровому полі три на три (відразу зазначимо, що у нього набагато більше шансів виграти, ніж у супротивника). Після цього другий гравець ставить у будь-якій вільній клітинці нулик. Потім знову ходить хрестик. Потім знову нулик. 
+            <br>
+            <b>І так триває до тих пір, поки: </b> 
+            <br>
+            <b>1.</b> Хтось з гравців не побудує в ряд або по діагоналі 3 хрестика або 3 нулики, і в результаті чого буде визнаний переможцем; 
+            <br>
+            <b>2.</b> Не залишиться вільних клітин, і на полі не буде присутній трьох йдучих підряд однакових фігур — в цьому випадку оголошується нічия.
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
